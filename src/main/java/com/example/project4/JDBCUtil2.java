@@ -4,12 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class JDBCUtil2 {
-	public static Connection getConnection(){  
+	public static Connection getConnection(){
 	    Connection con=null;  
-	    try{  
-	        Class.forName("org.mariadb.jdbc.Driver");
-	        con= DriverManager.getConnection("jdbc:mysql://walab.handong.edu:3306/p233_22200564","p233_22200564","Meer5i");
-	    }catch(Exception e){
+	    try{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			con= DriverManager.getConnection("jdbc:mysql://walab.handong.edu:3306/p233_22200564","p233_22200564","Meer5i");
+			con.setAutoCommit(false);
+		}catch(Exception e){
 	    	System.out.println(e);
 	    }  
 	    return con;  
@@ -21,5 +23,6 @@ public class JDBCUtil2 {
 			System.out.println("DB 연결됨!");
 		else
 			System.out.println("DB 연결중 오류 !");
+
+		}
 	}
-}

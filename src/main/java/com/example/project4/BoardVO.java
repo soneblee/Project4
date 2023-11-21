@@ -9,6 +9,8 @@ public class BoardVO {
 	private String content;
 	private Date regdate;
 	private int cnt;
+	private String category;
+	private Date moddate;
 	
 	public int getSeq() {
 		return seq;
@@ -46,4 +48,9 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
+	public Date getModdate() { return moddate; }
+	public void setModdate(Date moddate) { this.moddate = moddate;}
+	public String getCategory() { return category;}
+	public void setCategory(String category) { this.category = category;}
+
 }

@@ -48,7 +48,10 @@
 	<th>Title</th>
 	<th>Writer</th>
 	<th>Content</th>
-	<th>Regdate</th>
+	<th>Category</th>
+	<th>조회수</th>
+	<th>등록일</th>
+	<th>수정일</th>
 	<th>Edit</th>
 	<th>Delete</th>
 </tr>
@@ -58,7 +61,10 @@
 		<td>${u.getTitle()}</td>
 		<td>${u.getWriter()}</td>
 		<td>${u.getContent()}</td>
+		<td>${u.getCategory()}</td>
+		<td>${u.getCnt()}</td>
 		<td>${u.getRegdate()}</td>
+		<td>${u.getModdate()}</td>
 		<td><a href="editform.jsp?id=${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>
